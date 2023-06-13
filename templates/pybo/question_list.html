@@ -1,6 +1,7 @@
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
-
+{% extends 'base.html' %}
+{% comment %} {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}"> {% endcomment %}
+{% block content %}
 <div class="container my-3">
     <table class="table">
         <thead>
@@ -29,6 +30,7 @@
         </tbody>
     </table>
 </div>
+{% endblock %}
 
 {% comment %} {% if question_list %}
     <ul>

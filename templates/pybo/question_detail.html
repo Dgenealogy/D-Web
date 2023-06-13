@@ -1,7 +1,9 @@
-{% load static %}
+{% extends 'base.html' %}
+{% comment %} {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}"> {% endcomment %}
+{% block content %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
 <div class="container my-3">
     <!-- 질문 -->
     <h2 class="border-bottom py-2">{{ question.subject }}</h2>
@@ -39,6 +41,7 @@
         <input type="submit" value="답변등록" class="btn btn-primary">
     </form>
 </div>
+{% endblock %}
 
 {% comment %} <h1>{{ question.subject }}</h1>
 <div>
